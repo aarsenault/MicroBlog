@@ -7,7 +7,7 @@ from src.models.user import User
 
 app = Flask(__name__)
 app.secret_key = 'test'
-debug=True
+
 
 # flask method that runs only once
 @app.before_first_request
@@ -60,5 +60,24 @@ def register_user():
 
     return render_template("profile.html", email=session['email'])
 
+
+@app.route('/blogs/<string:user_id>')
+@app.route('/blogs')
+def user_blogs(user_id=None):
+    # takes the string after blogs - gets the user_id
+
+    if user_id is not None:
+        user = User.get_by_id(user_id=None)
+
+    else:
+        user = User.get_by_email(session['email'])
+
+    # get's the user's blogs, stores in blogs
+    blogs = user.get_blogs()
+
+    # renders the template while passing the blogs
+    return render_template('user_blogs.html', blogs=blogs, email=user.email)
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
