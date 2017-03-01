@@ -1,8 +1,36 @@
 
 
-
-
 #login-form {
     margin-top: 25px;
 
 }
+
+
+/* . means class, # means ID */
+.page-form {
+
+    font-family: monospace;
+    max-width: 480px;
+
+}
+
+div {
+    color: white;
+    font-family: monospace;
+    background-color: #030b21;
+}
+
+body {
+
+    /* colour of text */
+    color: white;
+    font-family: monospace;
+    background-color: #030b21;
+}
+
+label {
+
+    font-size: larger;
+
+}
+

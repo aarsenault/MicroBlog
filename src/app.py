@@ -15,6 +15,7 @@ def initialize_database():
     Database.initialize()
 
 # this acts as the homepage
+
 # Route with nothing in it left
 @app.route('/')
 def home_template():
@@ -47,7 +48,6 @@ def login_user():
 
     else:
         session['email'] = None
-
 
 # registers the user
 @app.route('/auth/register', methods=['POST'])
