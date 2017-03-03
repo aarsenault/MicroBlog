@@ -1,16 +1,20 @@
 {% extends "base.html" %}
-
 {% block content %}
 
-
+<!-- was passed email and blogs -->
 <div class="container">
 
     <h2> {{ email }}'s Blog's </h2>
+    <hr>
+
+
     {% for blog in blogs %}
         <h3>{{ blog.title }}</h3>
         <p>{{ blog.description }}</p>
+        <hr>
+
     {% endfor %}
-    <hr>
+
 </div>
 
 

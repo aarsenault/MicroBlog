@@ -118,3 +118,19 @@ class User(object):
         }
 
 
+
+# Debug purposes only
+if __name__ == "__main__":
+    Database.initialize()
+    # user = User.get_by_email("test@test.com")
+    user = User.get_by_email("newtest@gmail.com")
+
+    print('Running Debug Tests:')
+
+    print(user.password)
+
+    blogs = user.get_blogs()
+    print(blogs)
+
+    for blog in blogs:
+        print(blog.title)

@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container page-form">
-    <form id="login-form"  action="/auth/login" method="post">
+    <form id="login-form"  action="/auth/register" method="post">
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="youremail@email.com">
@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             <label for="password">Confirm Password</label>
-            <input type="password" class="form-control" id="confirm_password" name="password" placeholder="Re-type Password">
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Re-type Password">
         </div>
         <button type="submit" class="btn btn-default">Sign up!</button>
     </form>

@@ -58,3 +58,4 @@ class Blog(object):
         # with values of the blogs unpacked
         return [cls(**blog) for blog in blogs]
 
+
