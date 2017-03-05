@@ -113,13 +113,15 @@ def user_blogs(user_id=None):
 
 @app.route('/posts/<string:blog_id>')
 def blog_posts(blog_id):
+
     blog = Blog.from_mongo(blog_id)
 
     posts = blog.get_posts()
 
-    render_template('posts.html', posts=posts, blog_title=blog.title)
+    return render_template('posts.html', posts=posts, blog_title=blog.title)
 
 
+# this is the one I made
 @app.route('/profile')
 def check_profile():
 
