@@ -6,6 +6,7 @@
 <div class="container">
 
     <h2> {{ blog_title }} </h2>
+    <button class="btn btn primary"><a href="/posts/new/{{ blog_id }}"> New Post </a></button>
     {% if posts|length > 0 %}
         {% for post in posts %}
             <h3>{{ post.title }}</h3>
