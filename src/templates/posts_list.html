@@ -6,11 +6,12 @@
 <div class="container">
 
     <h2> {{ blog_title }} </h2>
-    <button class="btn btn primary"><a href="/posts/new/{{ blog_id }}"> New Post </a></button>
+    <!-- how to send post_id-->
+    <button class="btn btn primary"><a href="/{{ blog_id }}/new"> New Post </a></button>
     {% if posts|length > 0 %}
         {% for post in posts %}
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.content }}</p>
+            <h3> <a href="/{{ blog_id }}/{{}}"{{ post.title }}</h3>
+            <!--<p>{{ post.content }}</p>-->
             <p>{{ post.author }}</p>
             <hr>
         {% endfor %}
